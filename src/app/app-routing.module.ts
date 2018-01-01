@@ -23,6 +23,7 @@ import { MultiSelectComponent } from './components/pages/input/multi-select/mult
 import { PasswordComponent } from './components/pages/input/password/password.component';
 import { RadioButtonComponent } from './components/pages/input/radio-button/radio-button.component';
 import { RatingComponent } from './components/pages/input/rating/rating.component';
+import { SliderComponent } from './components/pages/input/slider/slider.component';
 
 export const routeComponents = [
   BtnComponent,
@@ -43,7 +44,8 @@ export const routeComponents = [
   MultiSelectComponent,
   PasswordComponent,
   RadioButtonComponent,
-  RatingComponent
+  RatingComponent,
+  SliderComponent
 ];
 const routes: Routes = [{
   path: '',
@@ -141,6 +143,10 @@ const routes: Routes = [{
     {
       path: 'ratting',
       component: RatingComponent
+    },
+    {
+      path: 'slider',
+      component: SliderComponent
     }
   ]
 }];
@@ -230,6 +236,10 @@ export const menuItems: MenuItem[] = [
       {
         label: 'Rating',
         routerLink: '/input/ratting'
+      },
+      {
+        label: 'Slider',
+        routerLink: '/input/slider'
       }
     ]
   }
