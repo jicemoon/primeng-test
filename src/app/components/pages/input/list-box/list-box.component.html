@@ -1,0 +1,32 @@
+<div class="list-box-root">
+  <h3 class="first">Basic</h3>
+  <p-listbox [options]="cities" [(ngModel)]="selectedCity" [style]="{'width':'200px'}" optionLabel="name"></p-listbox>
+
+  <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p>
+
+  <h3>Advanced (Multiple, Checkbox and Filter)</h3>
+  <p-listbox [options]="cities" [(ngModel)]="selectedCities" multiple="multiple" checkbox="checkbox" filter="filter" optionLabel="name">
+    <p-header>
+      <i class="fa fa-car"></i>
+      Cars
+    </p-header>
+  </p-listbox>
+  <p>Selected Cities:
+    <span *ngFor="let c of selectedCities" style="margin-right: 10px">{{c.name}}</span>
+  </p>
+
+  <h3>Content</h3>
+  <p-listbox [options]="cars" [(ngModel)]="selectedCar" [style]="{'width':'190px'}" [listStyle]="{'max-height':'250px'}">
+    <ng-template let-car pTemplate="item">
+      <div class="ui-helper-clearfix">
+        <img src="assets/showcase/images/demo/car/{{car.label}}.png" style="display:inline-block;margin:5px 0 0 5px" width="48">
+        <span style="float:right;margin:20px 10px 0 0">{{car.value}}</span>
+      </div>
+    </ng-template>
+    <p-footer>
+      Selected: {{selectedCar||'none'}}
+    </p-footer>
+  </p-listbox>
+
+  <button type="button" (click)="selectedCar=null" pButton icon="fa-close" label="Clear Selected Car"></button>
+</div>

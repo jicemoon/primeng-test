@@ -1,0 +1,15 @@
+<div>
+  <h3 class="first">Basic</h3>
+  <p-multiSelect [options]="cars" [(ngModel)]="selectedCars1" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
+  <p>Selected Cars: {{selectedCars1}}</p>
+
+  <h3>Template</h3>
+  <p-multiSelect [options]="cars" [(ngModel)]="selectedCars2" [panelStyle]="{minWidth:'12em'}">
+    <ng-template let-car pTemplate="item">
+      <img src="assets/showcase/images/demo/car/{{car.label}}.png" style="width:24px;display:inline-block;vertical-align:middle"
+      />
+      <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+    </ng-template>
+  </p-multiSelect>
+  <p>Selected Cars: {{selectedCars2}}</p>
+</div>

@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'prime-radio-button',
+  templateUrl: './radio-button.component.html',
+  styleUrls: ['./radio-button.component.scss']
+})
+export class RadioButtonComponent implements OnInit {
+  val1: string;
+  val2 = 'Option 2';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

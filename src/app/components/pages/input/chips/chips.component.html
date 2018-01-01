@@ -1,0 +1,16 @@
+<div class="chips-root">
+  <div>
+    <h3 class="first">Basic</h3>
+    <p-chips [(ngModel)]="values1"></p-chips>
+  </div>
+
+  <div>
+    <h3>ng-template</h3>
+    <p-chips [(ngModel)]="values2">
+      <ng-template let-item pTemplate="item">
+        {{item}} - (active)
+        <i class="fa fa-user" style="margin-right:2em"></i>
+      </ng-template>
+    </p-chips>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.checkbox-root{
+  >div{
+    padding: 20px;
+    background-color: #faf5f5
+  }
+  >div:nth-child(2n) {
+    background-color: #f9f9f9;
+  }
+}

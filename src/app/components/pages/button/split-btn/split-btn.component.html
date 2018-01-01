@@ -1,0 +1,11 @@
+<p-growl [value]="msgs"></p-growl>
+
+<h3 class="first">Basic</h3>
+<p-splitButton label="Save" icon="fa-check" (onClick)="save()" [model]="items"></p-splitButton>
+
+<h3>Severities</h3>
+<p-splitButton *ngFor="let type of btnTypes; let idx=index" label="Save {{type}}"
+  icon="fa-check" (onClick)="save()" [model]="items" [styleClass]="type !== 'basic'?('ui-button-' + type) : ''"></p-splitButton>
+
+<h3>RTL</h3>
+<p-splitButton label="Save" icon="fa-check" (onClick)="save()" [model]="items" dir="rtl"></p-splitButton>

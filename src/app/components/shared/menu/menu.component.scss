@@ -1,0 +1,10 @@
+.my-root-menu .my-menu {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  .ui-menubar-root-list {
+    width: 80%;
+    min-width: 800px;
+    margin: 0 auto;
+  }
+}
