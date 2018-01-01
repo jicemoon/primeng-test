@@ -22,6 +22,7 @@ import { InputMaskComponent } from './components/pages/input/input-mask/input-ma
 import { MultiSelectComponent } from './components/pages/input/multi-select/multi-select.component';
 import { PasswordComponent } from './components/pages/input/password/password.component';
 import { RadioButtonComponent } from './components/pages/input/radio-button/radio-button.component';
+import { RatingComponent } from './components/pages/input/rating/rating.component';
 
 export const routeComponents = [
   BtnComponent,
@@ -41,7 +42,8 @@ export const routeComponents = [
   InputMaskComponent,
   MultiSelectComponent,
   PasswordComponent,
-  RadioButtonComponent
+  RadioButtonComponent,
+  RatingComponent
 ];
 const routes: Routes = [{
   path: '',
@@ -135,6 +137,10 @@ const routes: Routes = [{
     {
       path: 'radioButton',
       component: RadioButtonComponent
+    },
+    {
+      path: 'ratting',
+      component: RatingComponent
     }
   ]
 }];
@@ -220,6 +226,10 @@ export const menuItems: MenuItem[] = [
       {
         label: 'Radio Button',
         routerLink: '/input/radioButton'
+      },
+      {
+        label: 'Rating',
+        routerLink: '/input/ratting'
       }
     ]
   }
