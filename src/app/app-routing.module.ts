@@ -24,6 +24,7 @@ import { PasswordComponent } from './components/pages/input/password/password.co
 import { RadioButtonComponent } from './components/pages/input/radio-button/radio-button.component';
 import { RatingComponent } from './components/pages/input/rating/rating.component';
 import { SliderComponent } from './components/pages/input/slider/slider.component';
+import { SpinnerComponent } from './components/pages/input/spinner/spinner.component';
 
 export const routeComponents = [
   BtnComponent,
@@ -45,7 +46,8 @@ export const routeComponents = [
   PasswordComponent,
   RadioButtonComponent,
   RatingComponent,
-  SliderComponent
+  SliderComponent,
+  SpinnerComponent
 ];
 const routes: Routes = [{
   path: '',
@@ -147,6 +149,10 @@ const routes: Routes = [{
     {
       path: 'slider',
       component: SliderComponent
+    },
+    {
+      path: 'spinner',
+      component: SpinnerComponent
     }
   ]
 }];
@@ -240,6 +246,10 @@ export const menuItems: MenuItem[] = [
       {
         label: 'Slider',
         routerLink: '/input/slider'
+      },
+      {
+        label: 'Spinner',
+        routerLink: '/input/spinner'
       }
     ]
   }
