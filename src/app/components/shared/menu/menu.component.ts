@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/primeng';
 
-import { menuItems } from '../../../app-routing.module';
+import { menuItems } from '../../../routings/app-routing.module';
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({

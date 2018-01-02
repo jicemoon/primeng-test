@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PrimeNGModules } from './modules/primeng.module';
 
-import { AppRoutingModule, routeComponents } from './app-routing.module';
+import { AppRoutingModule, routeComponents } from './routings/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/shared/menu/menu.component';
