@@ -5,12 +5,17 @@ import { CarouselComponent } from './../components/pages/data/carousel/carousel.
 import { DataGridComponent } from './../components/pages/data/data-grid/data-grid.component';
 import { DataListComponent } from './../components/pages/data/data-list/data-list.component';
 import { DataScrollerComponent } from './../components/pages/data/data-scroller/data-scroller.component';
+import { DataTableComponent } from './../components/pages/data/data-table/basic/data-table.component';
+import { FacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
+
 
 export const components = [
   CarouselComponent,
   DataGridComponent,
   DataListComponent,
-  DataScrollerComponent
+  DataScrollerComponent,
+  DataTableComponent,
+  FacetsComponent
 ];
 
 export const routeConfig: Route = {
@@ -36,6 +41,24 @@ export const routeConfig: Route = {
     {
       path: 'dataScroller',
       component: DataScrollerComponent
+    },
+    {
+      path: 'dataTable',
+      children: [
+        {
+          path: '',
+          redirectTo: 'basic',
+          pathMatch: 'prefix'
+        },
+        {
+          path: 'basic',
+          component: DataTableComponent
+        },
+        {
+          path: 'facets',
+          component: FacetsComponent
+        }
+      ]
     }
   ]
 };
@@ -59,6 +82,20 @@ export const menuItem: MenuItem = {
     {
       label: 'DataScroller',
       routerLink: '/data/dataScroller'
+    },
+    {
+      label: 'DataTable',
+      routerLink: '/data/dataTable',
+      items: [
+        {
+          label: 'Basic',
+          routerLink: '/data/dataTable/basic'
+        }
+        {
+          label: 'Facets',
+          routerLink: '/data/dataTable/facets'
+        }
+      ]
     }
   ]
 };
