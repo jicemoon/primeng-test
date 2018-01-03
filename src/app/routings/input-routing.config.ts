@@ -21,6 +21,7 @@ import { RatingComponent } from './../components/pages/input/rating/rating.compo
 import { SliderComponent } from './../components/pages/input/slider/slider.component';
 import { SpinnerComponent } from './../components/pages/input/spinner/spinner.component';
 import { SelectButtonComponent } from './../components/pages/input/select-button/select-button.component';
+import { ToggleButtonComponent } from './../components/pages/input/toggle-button/toggle-button.component';
 
 export const components = [
   InputGroupComponent,
@@ -42,7 +43,8 @@ export const components = [
   RatingComponent,
   SliderComponent,
   SpinnerComponent,
-  SelectButtonComponent
+  SelectButtonComponent,
+  ToggleButtonComponent
 ];
 
 export const routeConfig: Route = {
@@ -132,6 +134,10 @@ export const routeConfig: Route = {
     {
       path: 'selectBtn',
       component: SelectButtonComponent
+    },
+    {
+      path: 'toggleBtn',
+      component: ToggleButtonComponent
     }
   ]
 };
@@ -219,6 +225,10 @@ export const menuItem: MenuItem = {
     {
       label: 'Select Button',
       routerLink: '/input/selectBtn'
+    },
+    {
+      label: 'Toggle Button',
+      routerLink: '/input/toggleBtn'
     }
   ]
 };
