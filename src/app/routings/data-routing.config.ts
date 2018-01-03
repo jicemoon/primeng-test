@@ -7,6 +7,7 @@ import { DataListComponent } from './../components/pages/data/data-list/data-lis
 import { DataScrollerComponent } from './../components/pages/data/data-scroller/data-scroller.component';
 import { DataTableComponent } from './../components/pages/data/data-table/basic/data-table.component';
 import { FacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
+import { TemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
 
 
 export const components = [
@@ -15,7 +16,8 @@ export const components = [
   DataListComponent,
   DataScrollerComponent,
   DataTableComponent,
-  FacetsComponent
+  FacetsComponent,
+  TemplatingComponent
 ];
 
 export const routeConfig: Route = {
@@ -57,6 +59,10 @@ export const routeConfig: Route = {
         {
           path: 'facets',
           component: FacetsComponent
+        },
+        {
+          path: 'templating',
+          component: TemplatingComponent
         }
       ]
     }
@@ -90,10 +96,14 @@ export const menuItem: MenuItem = {
         {
           label: 'Basic',
           routerLink: '/data/dataTable/basic'
-        }
+        },
         {
           label: 'Facets',
           routerLink: '/data/dataTable/facets'
+        },
+        {
+          label: 'Templating',
+          routerLink: '/data/dataTable/templating'
         }
       ]
     }

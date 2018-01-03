@@ -10,5 +10,5 @@ import { CarService } from '../../../../../services/car.service';
 export class FacetsComponent extends DataTableBaseComponent {
   constructor(carService: CarService) {
     super(carService);
-   }
+  }
 }
