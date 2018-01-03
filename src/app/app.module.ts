@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/shared/menu/menu.component';
 
 import { CountryService } from './services/country.service';
+import { CarService } from './services/car.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { CountryService } from './services/country.service';
     BrowserAnimationsModule,
     ...PrimeNGModules
   ],
-  providers: [ CountryService ],
-  bootstrap: [ AppComponent ]
+  providers: [
+    CountryService,
+    CarService
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
