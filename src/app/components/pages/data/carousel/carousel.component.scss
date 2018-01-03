@@ -1,0 +1,18 @@
+.ui-grid {
+  margin: 10px 0px;
+  .ui-grid-row {
+    .ui-grid-col-12{
+      text-align: center;
+    }
+    >div {
+      padding: 4px 5px;
+      color: #535353;
+    }
+    .label{
+      padding-right: 5px;
+      font-weight: bold;
+      text-align: right;
+      color: #666666;
+    }
+  }
+}
