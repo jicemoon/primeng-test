@@ -4,11 +4,13 @@ import { MenuItem, SelectButton } from 'primeng/primeng';
 import { CarouselComponent } from './../components/pages/data/carousel/carousel.component';
 import { DataGridComponent } from './../components/pages/data/data-grid/data-grid.component';
 import { DataListComponent } from './../components/pages/data/data-list/data-list.component';
+import { DataScrollerComponent } from './../components/pages/data/data-scroller/data-scroller.component';
 
 export const components = [
   CarouselComponent,
   DataGridComponent,
-  DataListComponent
+  DataListComponent,
+  DataScrollerComponent
 ];
 
 export const routeConfig: Route = {
@@ -30,6 +32,10 @@ export const routeConfig: Route = {
     {
       path: 'dataList',
       component: DataListComponent
+    },
+    {
+      path: 'dataScroller',
+      component: DataScrollerComponent
     }
   ]
 };
@@ -49,6 +55,10 @@ export const menuItem: MenuItem = {
     {
       label: 'DataList',
       routerLink: '/data/dataList'
+    },
+    {
+      label: 'DataScroller',
+      routerLink: '/data/dataScroller'
     }
   ]
 };
