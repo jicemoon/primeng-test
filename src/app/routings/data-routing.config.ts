@@ -8,6 +8,7 @@ import { DataScrollerComponent } from './../components/pages/data/data-scroller/
 import { DataTableComponent } from './../components/pages/data/data-table/basic/data-table.component';
 import { FacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
 import { TemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
+import { ColGroupComponent } from './../components/pages/data/data-table/col-group/col-group.component';
 
 
 export const components = [
@@ -17,7 +18,8 @@ export const components = [
   DataScrollerComponent,
   DataTableComponent,
   FacetsComponent,
-  TemplatingComponent
+  TemplatingComponent,
+  ColGroupComponent
 ];
 
 export const routeConfig: Route = {
@@ -63,6 +65,10 @@ export const routeConfig: Route = {
         {
           path: 'templating',
           component: TemplatingComponent
+        },
+        {
+          path: 'colGroup',
+          component: ColGroupComponent
         }
       ]
     }
@@ -104,6 +110,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Templating',
           routerLink: '/data/dataTable/templating'
+        },
+        {
+          label: 'ColGroup',
+          routerLink: '/data/dataTable/colGroup'
         }
       ]
     }
