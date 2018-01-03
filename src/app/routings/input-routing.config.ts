@@ -22,6 +22,7 @@ import { SliderComponent } from './../components/pages/input/slider/slider.compo
 import { SpinnerComponent } from './../components/pages/input/spinner/spinner.component';
 import { SelectButtonComponent } from './../components/pages/input/select-button/select-button.component';
 import { ToggleButtonComponent } from './../components/pages/input/toggle-button/toggle-button.component';
+import { TriCheckboxComponent } from './../components/pages/input/tri-checkbox/tri-checkbox.component';
 
 export const components = [
   InputGroupComponent,
@@ -44,7 +45,8 @@ export const components = [
   SliderComponent,
   SpinnerComponent,
   SelectButtonComponent,
-  ToggleButtonComponent
+  ToggleButtonComponent,
+  TriCheckboxComponent
 ];
 
 export const routeConfig: Route = {
@@ -138,6 +140,10 @@ export const routeConfig: Route = {
     {
       path: 'toggleBtn',
       component: ToggleButtonComponent
+    },
+    {
+      path: 'triCheckbox',
+      component: TriCheckboxComponent
     }
   ]
 };
@@ -229,6 +235,10 @@ export const menuItem: MenuItem = {
     {
       label: 'Toggle Button',
       routerLink: '/input/toggleBtn'
+    },
+    {
+      label: 'TriCheckbox',
+      routerLink: '/input/triCheckbox'
     }
   ]
 };
