@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prime-col-group',
+  selector: 'prime-data-table-col-group',
   templateUrl: './col-group.component.html',
   styleUrls: ['./col-group.component.scss']
 })
-export class ColGroupComponent implements OnInit {
+export class DataTableColGroupComponent implements OnInit {
   sales: any[];
   constructor() { }
 

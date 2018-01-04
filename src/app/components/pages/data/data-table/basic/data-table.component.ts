@@ -4,11 +4,11 @@ import { CarService } from '../../../../../services/car.service';
 import { DataTableBaseComponent } from '../base.component';
 
 @Component({
-  selector: 'prime-data-table',
+  selector: 'prime-data-table-data-table',
   templateUrl: './data-table.component.html',
   styleUrls: ['./data-table.component.scss']
 })
-export class DataTableComponent extends DataTableBaseComponent {
+export class DataTableBasicComponent extends DataTableBaseComponent {
   constructor(carService: CarService) {
     super(carService);
    }

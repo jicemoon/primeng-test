@@ -5,10 +5,11 @@ import { CarouselComponent } from './../components/pages/data/carousel/carousel.
 import { DataGridComponent } from './../components/pages/data/data-grid/data-grid.component';
 import { DataListComponent } from './../components/pages/data/data-list/data-list.component';
 import { DataScrollerComponent } from './../components/pages/data/data-scroller/data-scroller.component';
-import { DataTableComponent } from './../components/pages/data/data-table/basic/data-table.component';
-import { FacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
-import { TemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
-import { ColGroupComponent } from './../components/pages/data/data-table/col-group/col-group.component';
+import { DataTableBasicComponent } from './../components/pages/data/data-table/basic/data-table.component';
+import { DataTableFacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
+import { DataTableTemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
+import { DataTableColGroupComponent } from './../components/pages/data/data-table/col-group/col-group.component';
+import { DataTableRowGroupComponent } from './../components/pages/data/data-table/row-group/row-group.component';
 
 
 export const components = [
@@ -16,10 +17,11 @@ export const components = [
   DataGridComponent,
   DataListComponent,
   DataScrollerComponent,
-  DataTableComponent,
-  FacetsComponent,
-  TemplatingComponent,
-  ColGroupComponent
+  DataTableBasicComponent,
+  DataTableFacetsComponent,
+  DataTableTemplatingComponent,
+  DataTableColGroupComponent,
+  DataTableRowGroupComponent
 ];
 
 export const routeConfig: Route = {
@@ -56,19 +58,23 @@ export const routeConfig: Route = {
         },
         {
           path: 'basic',
-          component: DataTableComponent
+          component: DataTableBasicComponent
         },
         {
           path: 'facets',
-          component: FacetsComponent
+          component: DataTableFacetsComponent
         },
         {
           path: 'templating',
-          component: TemplatingComponent
+          component: DataTableTemplatingComponent
         },
         {
           path: 'colGroup',
-          component: ColGroupComponent
+          component: DataTableColGroupComponent
+        },
+        {
+          path: 'rowGroup',
+          component: DataTableRowGroupComponent
         }
       ]
     }
@@ -114,6 +120,10 @@ export const menuItem: MenuItem = {
         {
           label: 'ColGroup',
           routerLink: '/data/dataTable/colGroup'
+        },
+        {
+          label: 'RowGroup',
+          routerLink: '/data/dataTable/rowGroup'
         }
       ]
     }

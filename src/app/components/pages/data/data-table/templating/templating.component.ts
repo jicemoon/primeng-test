@@ -5,11 +5,11 @@ import { Message } from 'primeng/primeng';
 import { Car } from '../../../../common/api';
 
 @Component({
-  selector: 'prime-templating',
+  selector: 'prime-data-table-templating',
   templateUrl: './templating.component.html',
   styleUrls: ['./templating.component.scss']
 })
-export class TemplatingComponent extends DataTableBaseComponent {
+export class DataTableTemplatingComponent extends DataTableBaseComponent {
   msgs: Message[] = [];
   constructor(carService: CarService) {
     super(carService);
