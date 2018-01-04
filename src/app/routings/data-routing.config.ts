@@ -10,6 +10,7 @@ import { DataTableFacetsComponent } from './../components/pages/data/data-table/
 import { DataTableTemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
 import { DataTableColGroupComponent } from './../components/pages/data/data-table/col-group/col-group.component';
 import { DataTableRowGroupComponent } from './../components/pages/data/data-table/row-group/row-group.component';
+import { DataTablePaginatorComponent } from './../components/pages/data/data-table/paginator/paginator.component';
 
 
 export const components = [
@@ -21,7 +22,8 @@ export const components = [
   DataTableFacetsComponent,
   DataTableTemplatingComponent,
   DataTableColGroupComponent,
-  DataTableRowGroupComponent
+  DataTableRowGroupComponent,
+  DataTablePaginatorComponent
 ];
 
 export const routeConfig: Route = {
@@ -75,6 +77,10 @@ export const routeConfig: Route = {
         {
           path: 'rowGroup',
           component: DataTableRowGroupComponent
+        },
+        {
+          path: 'paginator',
+          component: DataTablePaginatorComponent
         }
       ]
     }
@@ -124,6 +130,10 @@ export const menuItem: MenuItem = {
         {
           label: 'RowGroup',
           routerLink: '/data/dataTable/rowGroup'
+        },
+        {
+          label: 'Paginator',
+          routerLink: '/data/dataTable/paginator'
         }
       ]
     }

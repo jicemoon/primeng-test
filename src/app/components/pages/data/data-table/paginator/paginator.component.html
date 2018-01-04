@@ -1,0 +1,15 @@
+<div>
+  <p-dataTable [value]="cars" [rows]="10" [paginator]="true" [pageLinks]="10" [rowsPerPageOptions]="[5,10,20]">
+    <p-header>List of Cars</p-header>
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="year" header="Year"></p-column>
+    <p-column field="brand" header="Brand"></p-column>
+    <p-column field="color" header="Color"></p-column>
+    <ng-template pTemplate="paginatorLeft">
+      <button type="button" pButton icon="fa-refresh"></button>
+    </ng-template>
+    <ng-template pTemplate="paginatorRight">
+      <button type="button" pButton icon="fa-cloud-upload"></button>
+    </ng-template>
+  </p-dataTable>
+</div>
