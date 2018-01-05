@@ -11,6 +11,7 @@ import { DataTableTemplatingComponent } from './../components/pages/data/data-ta
 import { DataTableColGroupComponent } from './../components/pages/data/data-table/col-group/col-group.component';
 import { DataTableRowGroupComponent } from './../components/pages/data/data-table/row-group/row-group.component';
 import { DataTablePaginatorComponent } from './../components/pages/data/data-table/paginator/paginator.component';
+import { DataTableSortComponent } from './../components/pages/data/data-table/sort/sort.component';
 
 
 export const components = [
@@ -23,7 +24,8 @@ export const components = [
   DataTableTemplatingComponent,
   DataTableColGroupComponent,
   DataTableRowGroupComponent,
-  DataTablePaginatorComponent
+  DataTablePaginatorComponent,
+  DataTableSortComponent
 ];
 
 export const routeConfig: Route = {
@@ -81,6 +83,10 @@ export const routeConfig: Route = {
         {
           path: 'paginator',
           component: DataTablePaginatorComponent
+        },
+        {
+          path: 'sort',
+          component: DataTableSortComponent
         }
       ]
     }
@@ -134,6 +140,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Paginator',
           routerLink: '/data/dataTable/paginator'
+        },
+        {
+          label: 'Sort',
+          routerLink: '/data/dataTable/sort'
         }
       ]
     }
