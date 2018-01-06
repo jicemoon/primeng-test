@@ -13,7 +13,7 @@ import { DataTableRowGroupComponent } from './../components/pages/data/data-tabl
 import { DataTablePaginatorComponent } from './../components/pages/data/data-table/paginator/paginator.component';
 import { DataTableSortComponent } from './../components/pages/data/data-table/sort/sort.component';
 import { DataTableFilterComponent } from './../components/pages/data/data-table/filter/filter.component';
-
+import { DataTableSelectionComponent } from './../components/pages/data/data-table/selection/selection.component';
 
 export const components = [
   CarouselComponent,
@@ -27,7 +27,8 @@ export const components = [
   DataTableRowGroupComponent,
   DataTablePaginatorComponent,
   DataTableSortComponent,
-  DataTableFilterComponent
+  DataTableFilterComponent,
+  DataTableSelectionComponent
 ];
 
 export const routeConfig: Route = {
@@ -93,6 +94,10 @@ export const routeConfig: Route = {
         {
           path: 'filter',
           component: DataTableFilterComponent
+        },
+        {
+          path: 'selection',
+          component: DataTableSelectionComponent
         }
       ]
     }
@@ -154,6 +159,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Filter',
           routerLink: '/data/dataTable/filter'
+        },
+        {
+          label: 'Selection',
+          routerLink: '/data/dataTable/selection'
         }
       ]
     }
