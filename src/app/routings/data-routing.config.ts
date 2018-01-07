@@ -14,6 +14,7 @@ import { DataTablePaginatorComponent } from './../components/pages/data/data-tab
 import { DataTableSortComponent } from './../components/pages/data/data-table/sort/sort.component';
 import { DataTableFilterComponent } from './../components/pages/data/data-table/filter/filter.component';
 import { DataTableSelectionComponent } from './../components/pages/data/data-table/selection/selection.component';
+import { DataTableEditableComponent } from './../components/pages/data/data-table/editable/editable.component';
 
 export const components = [
   CarouselComponent,
@@ -28,7 +29,8 @@ export const components = [
   DataTablePaginatorComponent,
   DataTableSortComponent,
   DataTableFilterComponent,
-  DataTableSelectionComponent
+  DataTableSelectionComponent,
+  DataTableEditableComponent
 ];
 
 export const routeConfig: Route = {
@@ -98,6 +100,10 @@ export const routeConfig: Route = {
         {
           path: 'selection',
           component: DataTableSelectionComponent
+        },
+        {
+          path: 'editable',
+          component: DataTableEditableComponent
         }
       ]
     }
@@ -163,6 +169,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Selection',
           routerLink: '/data/dataTable/selection'
+        },
+        {
+          label: 'Editable',
+          routerLink: '/data/dataTable/editable'
         }
       ]
     }

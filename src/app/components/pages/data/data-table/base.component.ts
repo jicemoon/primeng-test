@@ -16,17 +16,17 @@ export class DataTableBaseComponent implements OnInit {
   constructor(public carService: CarService) { }
 
   ngOnInit() {
-      this.loading = true;
-      setTimeout(() => {
-          this.carService.getCarsSmall().then(cars => this.cars = cars);
-          this.loading = false;
-      }, 1000);
+    this.loading = true;
+    this.carService.getCarsSmall().then(cars => {
+      this.cars = cars;
+      this.loading = false;
+    });
 
-      this.cols = [
-          {field: 'vin', header: 'Vin'},
-          {field: 'year', header: 'Year'},
-          {field: 'brand', header: 'Brand'},
-          {field: 'color', header: 'Color'}
-      ];
+    this.cols = [
+      { field: 'vin', header: 'Vin' },
+      { field: 'year', header: 'Year' },
+      { field: 'brand', header: 'Brand' },
+      { field: 'color', header: 'Color' }
+    ];
   }
 }
