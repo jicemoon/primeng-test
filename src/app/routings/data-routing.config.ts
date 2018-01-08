@@ -1,3 +1,4 @@
+import { DataTableExpandComponent } from './../components/pages/data/data-table/expand/expand.component';
 import { Route } from '@angular/router';
 import { MenuItem, SelectButton } from 'primeng/primeng';
 
@@ -30,7 +31,8 @@ export const components = [
   DataTableSortComponent,
   DataTableFilterComponent,
   DataTableSelectionComponent,
-  DataTableEditableComponent
+  DataTableEditableComponent,
+  DataTableExpandComponent
 ];
 
 export const routeConfig: Route = {
@@ -104,6 +106,10 @@ export const routeConfig: Route = {
         {
           path: 'editable',
           component: DataTableEditableComponent
+        },
+        {
+          path: 'expand',
+          component: DataTableExpandComponent
         }
       ]
     }
@@ -173,6 +179,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Editable',
           routerLink: '/data/dataTable/editable'
+        },
+        {
+          label: 'Expand',
+          routerLink: '/data/dataTable/expand'
         }
       ]
     }
