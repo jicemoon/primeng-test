@@ -1,4 +1,3 @@
-import { DataTableExpandComponent } from './../components/pages/data/data-table/expand/expand.component';
 import { Route } from '@angular/router';
 import { MenuItem, SelectButton } from 'primeng/primeng';
 
@@ -16,6 +15,9 @@ import { DataTableSortComponent } from './../components/pages/data/data-table/so
 import { DataTableFilterComponent } from './../components/pages/data/data-table/filter/filter.component';
 import { DataTableSelectionComponent } from './../components/pages/data/data-table/selection/selection.component';
 import { DataTableEditableComponent } from './../components/pages/data/data-table/editable/editable.component';
+import { DataTableResizeComponent } from '../components/pages/data/data-table/resize/resize.component';
+import { DataTableReorderComponent } from './../components/pages/data/data-table/reorder/reorder.component';
+import { DataTableExpandComponent } from './../components/pages/data/data-table/expand/expand.component';
 
 export const components = [
   CarouselComponent,
@@ -32,7 +34,9 @@ export const components = [
   DataTableFilterComponent,
   DataTableSelectionComponent,
   DataTableEditableComponent,
-  DataTableExpandComponent
+  DataTableExpandComponent,
+  DataTableResizeComponent,
+  DataTableReorderComponent
 ];
 
 export const routeConfig: Route = {
@@ -110,6 +114,14 @@ export const routeConfig: Route = {
         {
           path: 'expand',
           component: DataTableExpandComponent
+        },
+        {
+          path: 'resize',
+          component: DataTableResizeComponent
+        },
+        {
+          path: 'reorder',
+          component: DataTableReorderComponent
         }
       ]
     }
@@ -183,6 +195,14 @@ export const menuItem: MenuItem = {
         {
           label: 'Expand',
           routerLink: '/data/dataTable/expand'
+        },
+        {
+          label: 'Resize',
+          routerLink: '/data/dataTable/resize'
+        },
+        {
+          label: 'Reorder',
+          routerLink: '/data/dataTable/reorder'
         }
       ]
     }
