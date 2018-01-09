@@ -18,6 +18,7 @@ import { DataTableEditableComponent } from './../components/pages/data/data-tabl
 import { DataTableResizeComponent } from '../components/pages/data/data-table/resize/resize.component';
 import { DataTableReorderComponent } from './../components/pages/data/data-table/reorder/reorder.component';
 import { DataTableExpandComponent } from './../components/pages/data/data-table/expand/expand.component';
+import { DataTableScrollComponent } from '../components/pages/data/data-table/scroll/scroll.component';
 
 export const components = [
   CarouselComponent,
@@ -36,7 +37,8 @@ export const components = [
   DataTableEditableComponent,
   DataTableExpandComponent,
   DataTableResizeComponent,
-  DataTableReorderComponent
+  DataTableReorderComponent,
+  DataTableScrollComponent
 ];
 
 export const routeConfig: Route = {
@@ -122,6 +124,10 @@ export const routeConfig: Route = {
         {
           path: 'reorder',
           component: DataTableReorderComponent
+        },
+        {
+          path: 'scroll',
+          component: DataTableScrollComponent
         }
       ]
     }
@@ -203,6 +209,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Reorder',
           routerLink: '/data/dataTable/reorder'
+        },
+        {
+          label: 'Scroll',
+          routerLink: '/data/dataTable/scroll'
         }
       ]
     }
