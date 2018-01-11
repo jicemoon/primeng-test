@@ -20,6 +20,7 @@ import { DataTableReorderComponent } from './../components/pages/data/data-table
 import { DataTableExpandComponent } from './../components/pages/data/data-table/expand/expand.component';
 import { DataTableScrollComponent } from '../components/pages/data/data-table/scroll/scroll.component';
 import { DataTableLazyComponent } from '../components/pages/data/data-table/lazy/lazy.component';
+import { DataTableContextMenuComponent } from './../components/pages/data/data-table/context-menu/context-menu.component';
 
 export const components = [
   CarouselComponent,
@@ -40,7 +41,8 @@ export const components = [
   DataTableResizeComponent,
   DataTableReorderComponent,
   DataTableScrollComponent,
-  DataTableLazyComponent
+  DataTableLazyComponent,
+  DataTableContextMenuComponent
 ];
 
 export const routeConfig: Route = {
@@ -134,6 +136,10 @@ export const routeConfig: Route = {
         {
           path: 'lazy',
           component: DataTableLazyComponent
+        },
+        {
+          path: 'contextMenu',
+          component: DataTableContextMenuComponent
         }
       ]
     }
@@ -223,6 +229,10 @@ export const menuItem: MenuItem = {
         {
           label: 'Lazy',
           routerLink: '/data/dataTable/lazy'
+        },
+        {
+          label: 'ContextMenu',
+          routerLink: '/data/dataTable/contextMenu'
         }
       ]
     }
