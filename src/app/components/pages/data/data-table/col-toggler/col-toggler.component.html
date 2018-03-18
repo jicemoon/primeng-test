@@ -1,0 +1,10 @@
+<div>
+  <p-dataTable [value]="cars">
+    <p-header>
+      <div style="text-align:left">
+        <p-multiSelect [options]="columnOptions" [(ngModel)]="cols"></p-multiSelect>
+      </div>
+    </p-header>
+    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+  </p-dataTable>
+</div>

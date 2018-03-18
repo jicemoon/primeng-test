@@ -1,3 +1,26 @@
 <div class="my-root-menu">
-  <p-menubar [model]="menuItems" styleClass="my-menu"></p-menubar>
+  <!-- <p-panelMenu [model]="menuItems" styleClass="my-menu"></p-panelMenu> -->
+  <div class="main-menu">
+    <ul>
+      <li *ngFor="let menu of menuItems; let idx=index;">
+        <div (click)="sliderSubMenu(idx)">
+          <a *ngIf="!!menu.routerLink" [routerLink]="menu.routerLink">{{ menu.label }}</a>
+          <span *ngIf="!menu.routerLink">{{ menu.label }}</span>
+        </div>
+        <ul class="sub-menu" [@sliderDownUp] *ngIf="currentIndex === idx">
+          <li *ngFor="let subMenu of menu.items">
+            <a [routerLinkActive]="'active'" (click)="threeMenuHandle(subMenu)" [routerLink]="subMenu.routerLink">{{ subMenu.label }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="threeMenuItems && threeMenuItems.length > 0" class="three-menu">
+    <div>
+      <span *ngFor="let tmi of threeMenuItems">
+        <a [routerLinkActive]="'active'" [routerLink]="tmi.routerLink">{{ tmi.label }}</a>
+      </span>
+    </div>
+  </div>
 </div>

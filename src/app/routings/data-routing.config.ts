@@ -21,6 +21,7 @@ import { DataTableExpandComponent } from './../components/pages/data/data-table/
 import { DataTableScrollComponent } from '../components/pages/data/data-table/scroll/scroll.component';
 import { DataTableLazyComponent } from '../components/pages/data/data-table/lazy/lazy.component';
 import { DataTableContextMenuComponent } from './../components/pages/data/data-table/context-menu/context-menu.component';
+import { DataTableColTogglerComponent } from './../components/pages/data/data-table/col-toggler/col-toggler.component';
 
 export const components = [
   CarouselComponent,
@@ -42,7 +43,8 @@ export const components = [
   DataTableReorderComponent,
   DataTableScrollComponent,
   DataTableLazyComponent,
-  DataTableContextMenuComponent
+  DataTableContextMenuComponent,
+  DataTableColTogglerComponent
 ];
 
 export const routeConfig: Route = {
@@ -140,6 +142,10 @@ export const routeConfig: Route = {
         {
           path: 'contextMenu',
           component: DataTableContextMenuComponent
+        },
+        {
+          path: 'colToggler',
+          component: DataTableColTogglerComponent
         }
       ]
     }
@@ -233,6 +239,10 @@ export const menuItem: MenuItem = {
         {
           label: 'ContextMenu',
           routerLink: '/data/dataTable/contextMenu'
+        },
+        {
+          label: 'Column Toggler',
+          routerLink: '/data/dataTable/colToggler'
         }
       ]
     }
