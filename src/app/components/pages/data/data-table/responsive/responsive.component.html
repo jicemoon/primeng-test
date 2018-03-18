@@ -1,0 +1,11 @@
+<div>
+  <button pButton type="button" (click)="toggle()" style="margin-bottom:10px" label="Toggle" icon="fa-list"></button>
+  
+  <p-dataTable [value]="cars" [rows]="10" [paginator]="true" [pageLinks]="3" [responsive]="true" [stacked]="stacked">
+    <p-header>Responsive</p-header>
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="year" header="Year"></p-column>
+    <p-column field="brand" header="Brand"></p-column>
+    <p-column field="color" header="Color"></p-column>
+  </p-dataTable>
+</div>
