@@ -156,6 +156,8 @@
 // ]
 
 import * as PrimeNG from 'primeng/primeng';
+import {DataViewModule} from 'primeng/dataview';
+
 const keys = Object.keys(PrimeNG);
 const values = [];
 keys.forEach((key) => {
@@ -163,4 +165,4 @@ keys.forEach((key) => {
     values.push(PrimeNG[key]);
   }
 });
-export const PrimeNGModules = values;
+export const PrimeNGModules = [DataViewModule, ...values];
