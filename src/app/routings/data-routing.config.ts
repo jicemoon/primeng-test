@@ -8,6 +8,7 @@ import { DataViewComponent } from './../components/pages/data/data-view/data-vie
 import { DataScrollerComponent } from './../components/pages/data/data-scroller/data-scroller.component';
 import * as dataTableConfig from './data-table-routing.config';
 import { OrganizationChartComponent } from '../components/pages/data/organization-chart/organization-chart.component';
+import { OrderListComponent } from '../components/pages/data/order-list/order-list.component';
 
 
 
@@ -18,7 +19,8 @@ export const components = [
   DataViewComponent,
   DataScrollerComponent,
   ...dataTableConfig.components,
-  OrganizationChartComponent
+  OrganizationChartComponent,
+  OrderListComponent
 ];
 
 export const routeConfig: Route = {
@@ -54,6 +56,10 @@ export const routeConfig: Route = {
       path: 'organizationChart',
       component: OrganizationChartComponent
     },
+    {
+      path: 'orderList',
+      component: OrderListComponent
+    },
   ]
 };
 
@@ -85,6 +91,10 @@ export const menuItem: MenuItem = {
     {
       label: 'Org Chart',
       routerLink: '/data/organizationChart'
+    },
+    {
+      label: 'OrderList',
+      routerLink: '/data/orderList'
     },
   ]
 };
