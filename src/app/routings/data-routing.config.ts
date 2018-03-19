@@ -9,7 +9,7 @@ import { DataScrollerComponent } from './../components/pages/data/data-scroller/
 import * as dataTableConfig from './data-table-routing.config';
 import { OrganizationChartComponent } from '../components/pages/data/organization-chart/organization-chart.component';
 import { OrderListComponent } from '../components/pages/data/order-list/order-list.component';
-
+import { GmapComponent } from '../components/pages/data/gmap/gmap.component';
 
 
 export const components = [
@@ -20,7 +20,8 @@ export const components = [
   DataScrollerComponent,
   ...dataTableConfig.components,
   OrganizationChartComponent,
-  OrderListComponent
+  OrderListComponent,
+  GmapComponent
 ];
 
 export const routeConfig: Route = {
@@ -60,6 +61,10 @@ export const routeConfig: Route = {
       path: 'orderList',
       component: OrderListComponent
     },
+    {
+      path: 'gMap',
+      component: GmapComponent
+    },
   ]
 };
 
@@ -95,6 +100,10 @@ export const menuItem: MenuItem = {
     {
       label: 'OrderList',
       routerLink: '/data/orderList'
+    },
+    {
+      label: 'GMap',
+      routerLink: '/data/gMap'
     },
   ]
 };
