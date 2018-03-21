@@ -10,6 +10,9 @@ import * as dataTableConfig from './data-table-routing.config';
 import { OrganizationChartComponent } from '../components/pages/data/organization-chart/organization-chart.component';
 import { OrderListComponent } from '../components/pages/data/order-list/order-list.component';
 import { GmapComponent } from '../components/pages/data/gmap/gmap.component';
+import { PaginatorComponent } from '../components/pages/data/paginator/paginator.component';
+import { PickListComponent } from '../components/pages/data/pick-list/pick-list.component';
+import { ScheduleComponent } from '../components/pages/data/schedule/schedule.component';
 
 
 export const components = [
@@ -21,7 +24,10 @@ export const components = [
   ...dataTableConfig.components,
   OrganizationChartComponent,
   OrderListComponent,
-  GmapComponent
+  GmapComponent,
+  PaginatorComponent,
+  PickListComponent,
+  ScheduleComponent,
 ];
 
 export const routeConfig: Route = {
@@ -65,6 +71,18 @@ export const routeConfig: Route = {
       path: 'gMap',
       component: GmapComponent
     },
+    {
+      path: 'paginator',
+      component: PaginatorComponent
+    },
+    {
+      path: 'pickList',
+      component: PickListComponent
+    },
+    {
+      path: 'schedule',
+      component: ScheduleComponent
+    },
   ]
 };
 
@@ -104,6 +122,18 @@ export const menuItem: MenuItem = {
     {
       label: 'GMap',
       routerLink: '/data/gMap'
+    },
+    {
+      label: 'Paginator',
+      routerLink: '/data/paginator'
+    },
+    {
+      label: 'PickList',
+      routerLink: '/data/pickList'
+    },
+    {
+      label: 'Schedule',
+      routerLink: '/data/schedule'
     },
   ]
 };

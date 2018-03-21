@@ -14,12 +14,13 @@ import { MenuComponent } from './components/shared/menu/menu.component';
 
 import { CountryService } from './services/country.service';
 import { CarService } from './services/car.service';
+import { EventService } from './services/event.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ...routeComponents
+    ...routeComponents,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +33,8 @@ import { CarService } from './services/car.service';
   ],
   providers: [
     CountryService,
-    CarService
+    CarService,
+    EventService
   ],
   bootstrap: [AppComponent]
 })
