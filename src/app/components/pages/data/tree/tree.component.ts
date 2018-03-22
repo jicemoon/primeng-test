@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Tree, MenuItem, TreeNode, Message } from 'primeng/primeng';
-import { TreeDragDropService } from 'primeng/api';
+import { Tree } from 'primeng/primeng';
+import { MenuItem, TreeNode, Message, TreeDragDropService } from 'primeng/api';
 import { NodeService } from '../../../../services/node.service';
 
 @Component({

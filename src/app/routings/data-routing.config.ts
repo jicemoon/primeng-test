@@ -15,6 +15,7 @@ import { PickListComponent } from '../components/pages/data/pick-list/pick-list.
 import { ScheduleComponent } from '../components/pages/data/schedule/schedule.component';
 import * as tableConfig from './table-routing.config';
 import { TreeComponent } from '../components/pages/data/tree/tree.component';
+import { TreeTableComponent } from '../components/pages/data/tree-table/tree-table.component';
 
 
 export const components = [
@@ -31,7 +32,8 @@ export const components = [
   PickListComponent,
   ScheduleComponent,
   ...tableConfig.components,
-  TreeComponent
+  TreeComponent,
+  TreeTableComponent,
 ];
 
 export const routeConfig: Route = {
@@ -92,6 +94,10 @@ export const routeConfig: Route = {
       path: 'tree',
       component: TreeComponent
     },
+    {
+      path: 'treeTable',
+      component: TreeTableComponent
+    },
   ]
 };
 
@@ -146,8 +152,12 @@ export const menuItem: MenuItem = {
     },
     tableConfig.menuItem,
     {
-      label: 'tree',
+      label: 'Tree',
       routerLink: '/data/tree'
+    },
+    {
+      label: 'TreeTable',
+      routerLink: '/data/treeTable'
     },
   ]
 };
