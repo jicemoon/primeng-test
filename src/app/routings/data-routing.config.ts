@@ -13,6 +13,8 @@ import { GmapComponent } from '../components/pages/data/gmap/gmap.component';
 import { PaginatorComponent } from '../components/pages/data/paginator/paginator.component';
 import { PickListComponent } from '../components/pages/data/pick-list/pick-list.component';
 import { ScheduleComponent } from '../components/pages/data/schedule/schedule.component';
+import * as tableConfig from './table-routing.config';
+import { TreeComponent } from '../components/pages/data/tree/tree.component';
 
 
 export const components = [
@@ -28,6 +30,8 @@ export const components = [
   PaginatorComponent,
   PickListComponent,
   ScheduleComponent,
+  ...tableConfig.components,
+  TreeComponent
 ];
 
 export const routeConfig: Route = {
@@ -83,6 +87,11 @@ export const routeConfig: Route = {
       path: 'schedule',
       component: ScheduleComponent
     },
+    tableConfig.routeConfig,
+    {
+      path: 'tree',
+      component: TreeComponent
+    },
   ]
 };
 
@@ -134,6 +143,11 @@ export const menuItem: MenuItem = {
     {
       label: 'Schedule',
       routerLink: '/data/schedule'
+    },
+    tableConfig.menuItem,
+    {
+      label: 'tree',
+      routerLink: '/data/tree'
     },
   ]
 };

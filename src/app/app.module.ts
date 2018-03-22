@@ -15,6 +15,7 @@ import { MenuComponent } from './components/shared/menu/menu.component';
 import { CountryService } from './services/country.service';
 import { CarService } from './services/car.service';
 import { EventService } from './services/event.service';
+import { NodeService } from './services/node.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EventService } from './services/event.service';
   providers: [
     CountryService,
     CarService,
-    EventService
+    EventService,
+    NodeService
   ],
   bootstrap: [AppComponent]
 })
