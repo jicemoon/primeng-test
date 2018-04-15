@@ -11,6 +11,7 @@ export class DataTableSortComponent implements OnInit {
   cars1: Car[];
   cars2: Car[];
   sortF = 'year';
+  sortO = 1;
 
   constructor(private carService: CarService) { }
 

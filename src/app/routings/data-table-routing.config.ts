@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 import { MenuItem, SelectButton } from 'primeng/primeng';
 
+import { DataTableBaseComponent } from '../components/pages/data/data-table/base.component';
 import { DataTableBasicComponent } from './../components/pages/data/data-table/basic/data-table.component';
 import { DataTableFacetsComponent } from './../components/pages/data/data-table/facets/facets.component';
 import { DataTableTemplatingComponent } from './../components/pages/data/data-table/templating/templating.component';
@@ -23,6 +24,7 @@ import { DataTableCrudComponent } from '../components/pages/data/data-table/crud
 import { DataTableExportComponent } from '../components/pages/data/data-table/export/export.component';
 
 export const components = [
+  DataTableBaseComponent,
   DataTableBasicComponent,
   DataTableFacetsComponent,
   DataTableTemplatingComponent,

@@ -63,6 +63,7 @@
     <p-column field="size" header="Size"></p-column>
     <p-column field="type" header="Type"></p-column>
   </p-treeTable>
+  <p-contextMenu #cm [model]="items"></p-contextMenu>
 
   <p-treeTable [value]="lazyFiles" [style]="{'margin-top':'50px'}" (onNodeExpand)="nodeExpand($event)">
     <p-header>Lazy Loading</p-header>
